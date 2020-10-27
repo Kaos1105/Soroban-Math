@@ -67,6 +67,7 @@ public class OddBallController : MonoBehaviour
             if (originY <= 0)
             {
                 mathController.mathValue += value;
+                mathController.UpdateValue();
             }
 
         }
@@ -81,6 +82,7 @@ public class OddBallController : MonoBehaviour
             if (originY >= 0)
             {
                 mathController.mathValue -= value;
+                mathController.UpdateValue();
             }
         }
         //if (yDirection != 0)

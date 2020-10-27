@@ -10,12 +10,19 @@ public class MathController : MonoBehaviour
     public Text guiText;
     void Start()
     {
+        mathValue = 0;
+        UpdateValue();
     }
 
     // Update is called once per frame
     void Update()
     {
         // Debug.Log(mathValue);
+
+    }
+
+    public void UpdateValue()
+    {
         guiText.text = mathValue.ToString();
     }
 }

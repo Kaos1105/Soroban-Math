@@ -58,6 +58,7 @@ public class ResetBall : MonoBehaviour
             ballController.Moving(1f);
         }
         mathController.mathValue = 0;
+        mathController.UpdateValue();
         this.gameObject.transform.localScale = Vector3.Lerp(changeScale, originalScale, Time.deltaTime * 0.1f);
     }
 }
