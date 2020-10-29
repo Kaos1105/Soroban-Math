@@ -6,7 +6,11 @@ TagManager:
   tags:
   - SorobanBall
   - MathController
+  - QuizController
   - SorobanBallOdd
+  - CollideCube
+  - ResetTable
+  - TouchController
   layers:
   - Default
   - TransparentFX

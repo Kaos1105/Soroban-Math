@@ -133,9 +133,10 @@ GameObject:
   m_Component:
   - component: {fileID: 196029477}
   - component: {fileID: 196029478}
+  - component: {fileID: 196029479}
   m_Layer: 0
   m_Name: QuizController
-  m_TagString: Untagged
+  m_TagString: QuizController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,7 +149,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196029476}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.9245734, y: 4.369083, z: -7.1159596}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -169,7 +170,39 @@ MonoBehaviour:
   upperText: {fileID: 1274687809}
   lowerText: {fileID: 1324582525}
   total: 4
-  waitTime: 2
+  waitTime: 0.75
+  mathController: {fileID: 1275145785}
+--- !u!95 &196029479
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196029476}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c3bb573e7e7a4e6459a64cf1f06a19d4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &416507761 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4587653281953472818, guid: bcbbcf2ec2816fd4586b1ba931ba7372,
+    type: 3}
+  m_PrefabInstance: {fileID: 1183854807}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fda1af87528dab41b66aadf4fb9605e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &532401299
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,7 +333,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 106.49}
+  m_AnchoredPosition: {x: 0, y: 5.6}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &721679087
@@ -352,14 +385,54 @@ PrefabInstance:
       propertyPath: touchController
       value: 
       objectReference: {fileID: 1905114998}
+    - target: {fileID: 673490783, guid: bcbbcf2ec2816fd4586b1ba931ba7372, type: 3}
+      propertyPath: resetBall
+      value: 
+      objectReference: {fileID: 416507761}
+    - target: {fileID: 673490784, guid: bcbbcf2ec2816fd4586b1ba931ba7372, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 673490784, guid: bcbbcf2ec2816fd4586b1ba931ba7372, type: 3}
+      propertyPath: m_Constraints
+      value: 122
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035748433, guid: bcbbcf2ec2816fd4586b1ba931ba7372, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035748433, guid: bcbbcf2ec2816fd4586b1ba931ba7372, type: 3}
+      propertyPath: m_Constraints
+      value: 122
+      objectReference: {fileID: 0}
     - target: {fileID: 1035748434, guid: bcbbcf2ec2816fd4586b1ba931ba7372, type: 3}
       propertyPath: touchController
       value: 
       objectReference: {fileID: 1905114998}
+    - target: {fileID: 1035748434, guid: bcbbcf2ec2816fd4586b1ba931ba7372, type: 3}
+      propertyPath: resetBall
+      value: 
+      objectReference: {fileID: 416507761}
     - target: {fileID: 1434484454, guid: bcbbcf2ec2816fd4586b1ba931ba7372, type: 3}
       propertyPath: touchController
       value: 
       objectReference: {fileID: 1905114998}
+    - target: {fileID: 1434484454, guid: bcbbcf2ec2816fd4586b1ba931ba7372, type: 3}
+      propertyPath: resetBall
+      value: 
+      objectReference: {fileID: 416507761}
+    - target: {fileID: 1434484455, guid: bcbbcf2ec2816fd4586b1ba931ba7372, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1434484455, guid: bcbbcf2ec2816fd4586b1ba931ba7372, type: 3}
+      propertyPath: m_Constraints
+      value: 122
+      objectReference: {fileID: 0}
+    - target: {fileID: 1434484460, guid: bcbbcf2ec2816fd4586b1ba931ba7372, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 117957103156753043, guid: bcbbcf2ec2816fd4586b1ba931ba7372,
         type: 3}
       propertyPath: m_IsActive
@@ -380,6 +453,21 @@ PrefabInstance:
       propertyPath: touchController
       value: 
       objectReference: {fileID: 1905114998}
+    - target: {fileID: 1173700621280194903, guid: bcbbcf2ec2816fd4586b1ba931ba7372,
+        type: 3}
+      propertyPath: resetBall
+      value: 
+      objectReference: {fileID: 416507761}
+    - target: {fileID: 1401311781228785235, guid: bcbbcf2ec2816fd4586b1ba931ba7372,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1783695462006255105, guid: bcbbcf2ec2816fd4586b1ba931ba7372,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2088366003853651629, guid: bcbbcf2ec2816fd4586b1ba931ba7372,
         type: 3}
       propertyPath: touchController
@@ -400,6 +488,16 @@ PrefabInstance:
       propertyPath: touchController
       value: 
       objectReference: {fileID: 1905114998}
+    - target: {fileID: 3302937960324676215, guid: bcbbcf2ec2816fd4586b1ba931ba7372,
+        type: 3}
+      propertyPath: resetBall
+      value: 
+      objectReference: {fileID: 416507761}
+    - target: {fileID: 3405538545490055037, guid: bcbbcf2ec2816fd4586b1ba931ba7372,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3801690352805512213, guid: bcbbcf2ec2816fd4586b1ba931ba7372,
         type: 3}
       propertyPath: touchController
@@ -470,6 +568,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4587653280678502988, guid: bcbbcf2ec2816fd4586b1ba931ba7372,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4587653281953472818, guid: bcbbcf2ec2816fd4586b1ba931ba7372,
         type: 3}
       propertyPath: touchController
@@ -484,6 +587,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5661560937621886238, guid: bcbbcf2ec2816fd4586b1ba931ba7372,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5661560937621886238, guid: bcbbcf2ec2816fd4586b1ba931ba7372,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 122
       objectReference: {fileID: 0}
     - target: {fileID: 5705273829790076027, guid: bcbbcf2ec2816fd4586b1ba931ba7372,
         type: 3}
@@ -500,6 +613,16 @@ PrefabInstance:
       propertyPath: touchController
       value: 
       objectReference: {fileID: 1905114998}
+    - target: {fileID: 8411761747603117403, guid: bcbbcf2ec2816fd4586b1ba931ba7372,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8450434287224456571, guid: bcbbcf2ec2816fd4586b1ba931ba7372,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8574777110252081030, guid: bcbbcf2ec2816fd4586b1ba931ba7372,
         type: 3}
       propertyPath: m_IsActive
@@ -542,7 +665,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 68}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1274687807
@@ -577,10 +700,10 @@ RectTransform:
   m_Father: {fileID: 1209757808}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.39532286}
-  m_AnchorMax: {x: 0.9917355, y: 0.6022915}
-  m_AnchoredPosition: {x: 0.41322327, y: 249.7}
-  m_SizeDelta: {x: 0.82644653, y: 39.503143}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 123.1}
+  m_SizeDelta: {x: 90, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1274687809
 MonoBehaviour:
@@ -703,10 +826,10 @@ RectTransform:
   m_Father: {fileID: 1209757808}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.39532286}
-  m_AnchorMax: {x: 0.9917355, y: 0.6022915}
-  m_AnchoredPosition: {x: 0.41322327, y: 129.1}
-  m_SizeDelta: {x: 0.82644653, y: 39.503143}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 25.5}
+  m_SizeDelta: {x: 90, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1324582525
 MonoBehaviour:
@@ -977,11 +1100,11 @@ RectTransform:
   m_Father: {fileID: 1417145409}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.39532286}
-  m_AnchorMax: {x: 0.9917355, y: 0.6022915}
-  m_AnchoredPosition: {x: 2, y: -1.7000122}
-  m_SizeDelta: {x: -380, y: -118}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -101.3, y: 1}
+  m_SizeDelta: {x: 100, y: 30}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &1662034333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1123,7 +1246,7 @@ GameObject:
   - component: {fileID: 1905114998}
   m_Layer: 5
   m_Name: Touch Area
-  m_TagString: Untagged
+  m_TagString: TouchController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1196,8 +1319,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 1.5}
+  m_SizeDelta: {x: 0, y: -3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2035333896
 GameObject:

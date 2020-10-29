@@ -14,6 +14,9 @@ public class TouchController : MonoBehaviour, IPointerDownHandler, IDragHandler,
     private int pointerID;
     private Vector2 smoothDirection;
 
+    [System.NonSerialized]
+    public bool pointerUp;
+
     string message;
     private bool touched;
     void Awake()
@@ -30,6 +33,7 @@ public class TouchController : MonoBehaviour, IPointerDownHandler, IDragHandler,
             touched = true;
             pointerID = data.pointerId;
             origin = data.position;
+            pointerUp = false;
         }
     }
     public void OnDrag(PointerEventData data)
@@ -39,6 +43,7 @@ public class TouchController : MonoBehaviour, IPointerDownHandler, IDragHandler,
             Vector2 currentPosition = data.position;
             Vector2 directionRaw = currentPosition - origin;
             direction = directionRaw.normalized;
+            pointerUp = true;
         }
     }
     public void OnPointerUp(PointerEventData data)
@@ -48,6 +53,7 @@ public class TouchController : MonoBehaviour, IPointerDownHandler, IDragHandler,
             direction = Vector2.zero;
             touched = false;
             hit = false;
+            pointerUp = false;
         }
     }
     void Update()

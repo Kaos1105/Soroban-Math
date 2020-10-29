@@ -27,6 +27,7 @@ public class ResetBall : MonoBehaviour
         }
         normalBall = GameObject.FindGameObjectsWithTag("SorobanBall");
         oddBall = GameObject.FindGameObjectsWithTag("SorobanBallOdd");
+        Reset();
     }
 
     // Update is called once per frame
@@ -44,19 +45,23 @@ public class ResetBall : MonoBehaviour
         this.gameObject.transform.localScale = Vector3.Lerp(originalScale, changeScale, Time.deltaTime * 0.1f);
     }
 
-    void Reset()
+    public void Reset()
     {
-        foreach (var ball in normalBall)
+        if (normalBall.Length != 0 && oddBall.Length != 0)
         {
-            var ballController = ball.GetComponent<OddBallController>();
-            ballController.Moving(-1f);
+            foreach (var ball in normalBall)
+            {
+                var ballController = ball.GetComponent<OddBallController>();
+                ballController.Moving(-1f);
+            }
+            foreach (var ball in oddBall)
+            {
+                //Debug.Log(ball);
+                var ballController = ball.GetComponent<OddBallController>();
+                ballController.Moving(1f);
+            }
         }
-        foreach (var ball in oddBall)
-        {
-            //Debug.Log(ball);
-            var ballController = ball.GetComponent<OddBallController>();
-            ballController.Moving(1f);
-        }
+
         mathController.mathValue = 0;
         mathController.UpdateValue();
         this.gameObject.transform.localScale = Vector3.Lerp(changeScale, originalScale, Time.deltaTime * 0.1f);
