@@ -79,15 +79,15 @@ public class OddBallController : MonoBehaviour
             {
                 if (touchController.pointerUp)
                 {
-                    Debug.Log(direction);
+                    //Debug.Log(direction);
                     Moving(direction.y);
                     if (quizController)
                     {
-                        Debug.Log("Before Result");
+                        //Debug.Log("Before Result");
                         //touchController.gameObject.SetActive(false);
-                        yield return new WaitForSeconds(quizController.waitTime);
-                        quizController.UpdateResult();
-                        Debug.Log("Updated Result");
+                        //yield return new WaitForSeconds(quizController.waitTime);
+                        yield return quizController.CheckResult();
+                        //Debug.Log("Updated Result");
                         //touchController.gameObject.SetActive(true);
                     }
                 }

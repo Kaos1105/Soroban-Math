@@ -34,4 +34,8 @@ public class False_NA_State : StateMachineBehaviour
         // Implement code that sets up animation IK (inverse kinematics)
         animator.SetBool("IsReset", true);
     }
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+
+    }
 }

@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class ResetBall : MonoBehaviour
 {
     // Start is called before the first frame update
-    private GameObject[] normalBall;
-    private GameObject[] oddBall;
+    [System.NonSerialized]
+    public GameObject[] normalBall;
+    [System.NonSerialized]
+    public GameObject[] oddBall;
+    private Vector3[] listCorrectPosition;
     private MathController mathController;
     public TouchController touchController;
 

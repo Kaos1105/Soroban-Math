@@ -48,6 +48,6 @@ public class NormalState : StateMachineBehaviour
         }
         quizController.ResetState();
         animator.SetBool("IsBegin", false);
-        Debug.Log("Resetted");
+        //Debug.Log("Resetted");
     }
 }

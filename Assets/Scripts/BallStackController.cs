@@ -49,13 +49,12 @@ public class BallStackController : MonoBehaviour
                     otherBallController.direction = thisBallController.direction;
                     otherBallController.Moving(thisBallController.direction.y);
                 }
-
                 break;
             case "CollideCube":
                 if (quizController)
                 {
                     quizController.IsFirstHit.Push(true);
-                    Debug.Log(quizController.IsFirstHit.Peek() + "Hit bar");
+                    //Debug.Log(quizController.IsFirstHit.Peek() + "Hit bar");
                 }
                 break;
             default:
